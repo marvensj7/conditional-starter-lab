@@ -54,3 +54,20 @@ console.log(`Additional space needed: ${additionalSpace.toFixed(2)} square meter
 // new radius
 const newRadius = Math.sqrt(spaceRequired / PI);
 console.log(`New radius: ${newRadius.toFixed(2)} meters.`);
+
+// Part 3
+
+// 100 plants in the original garden
+try {
+    const newPlants = 100;
+    const spaceNeeded = newPlants * minSpacePerPlant;
+
+    // not enough room, throw error
+    if (spaceNeeded > area) {
+        throw new Error(`Not enough space. ${newPlants} plants need ${spaceNeeded} square meters but the garden only has ${area.toFixed(2)}.`);
+    }
+
+    console.log(`The garden can hold ${newPlants} plants.`);
+} catch (error) {
+    console.log(error.message);
+}
