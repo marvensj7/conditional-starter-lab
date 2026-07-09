@@ -34,3 +34,23 @@ if (plantCount > maxCapacity * 0.8) {
 // week 1 = 40 plants, plant more
 // week 2 = 80 plants, prune
 // week 3 = 160 plants, prune
+
+// Part 2
+
+// starting with 100 plants for 10 weeks
+const bigStartingPlants = 100;
+const bigWeek = 10;
+const bigPlantCount = bigStartingPlants * (2 ** bigWeek);
+
+// space needed for the plants
+const spaceRequired = bigPlantCount * minSpacePerPlant;
+
+// extra space needed
+const additionalSpace = spaceRequired - area;
+
+console.log(`After 10 weeks there are ${bigPlantCount} plants.`);
+console.log(`Additional space needed: ${additionalSpace.toFixed(2)} square meters.`);
+
+// new radius
+const newRadius = Math.sqrt(spaceRequired / PI);
+console.log(`New radius: ${newRadius.toFixed(2)} meters.`);
