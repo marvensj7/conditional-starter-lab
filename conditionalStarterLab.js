@@ -14,7 +14,7 @@ const startingPlants = 20;
 const maxCapacity = area / minSpacePerPlant;
 
 // Week Growth
-let week = 1;
+let week = 3;
 
 // Plants Weekly Double Growth
 let plantCount = startingPlants * (2 ** week);
